@@ -1,0 +1,8 @@
+<h1>Cookie Batches</h1>
+<ul> 
+	<% @cookie_batches.each do | cookie_batch | %>
+	<li> <%= cookie_batch.sender.name %> owes <%= cookie_batch.recipient.name %> <%= cookie_batch.number_of_cookies %> cookie batches <%= link_to "Delete", cookie_batch_path(cookie_batch), method: :delete, data: { confirm: "Are you sure?" } %> </li>
+
+ 	<% end %>
+</ul>
+<%= link_to "New Cookie Batch", new_cookie_batch_path %>

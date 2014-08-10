@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :cookie_batches, only: [:index, :new, :create, :show, :destroy]
+
+  resources :users, only: :index
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -15,7 +19,7 @@ Rails.application.routes.draw do
   #   resources :products
 
   # Example resource route with options:
-  #   resources :products do
+  #   resources :users do
   #     member do
   #       get 'short'
   #       post 'toggle'
